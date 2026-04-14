@@ -44,7 +44,7 @@ Klient z wysoką akceptacją ceny - najczęściej celuje aby początkowym dniem 
 
 Charakterystyka klasy **RareLongStaySuitePersona**:
 
-Rzadki klient - 50% szans generowania zapytania w danym dniu, jeśli wysyła zapytanie to tylko jedno. Zawsze bierze *suite* i zawsze pobyt na 3 tygodnie (21 dni); ma wysoki budżet. Akceptuje ofertę, jeśli cena pokoju znajduje się w przedziale akceptowanych przez niego cen (przedział o początku w zerze i górnej granicy będącej liczbą losową z przedziału [1000, 1200]). W przypadku kilku ofert z różnych hoteli faworyzuje hotele w których już był (zmienna kontekstowa *returning_client*).
+Rzadki klient - 50% szans generowania zapytania w danym dniu, jeśli wysyła zapytanie to tylko jedno. Zawsze bierze *suite* i zawsze pobyt na 3 tygodnie (21 dni); ma wysoki budżet. Akceptuje ofertę, jeśli cena pokoju znajduje się w przedziale akceptowanych przez niego cen (przedział o początku w zerze i górnej granicy będącej liczbą losową z przedziału [1000, 1200]). W przypadku kilku ofert z różnych hoteli faworyzuje hotele w których już był (zmienna kontekstowa *returning_client*, ta część jeszcze nie do końca zaimplementowana).
 
 Plan na potencjalne zmiany w przyszłości: uwzględnienie zmiennych kontekstowych (*city*, *device* i *retuning_client*) w metodach generowania zapytań przez klasy klientów; zmiana logiki akceptacji ofert przez każdą z klas klientów na taką, która korzysta z pewnych rozkładów prawdopodobieństwa (obecnie, jeśli cena znajduje się w przedziale cen akceptowanych klient akceptuje ofertę - bez znaczenia czy cena jest bliska dolnej czy górnej granicy owego przedziału - jedną z naturalnych metod rozszerzenia tej logiki jest zadanie pewnego rozkładu prawdopodobieństwa na tym przedziale).
 
