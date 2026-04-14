@@ -35,12 +35,15 @@ Obecna implementacja systemu agencyjnego zawiera 3 persony klientów:
 - **RareLongStaySuitePersona**
 
 Charakterystyka klasy **LastMinutePersona**:
+
 Typowy klient *last-minute* - rezerwuje pobyt 1-3 dniowy na 1-3 dni do przodu, ma niski/średni budżet. Akceptuje ofertę, jeśli cena pokoju znajduje się w przedziale akceptowanych przez niego cen (przedział o początku w zerze i górnej granicy będącej liczbą losową z przedziału [400, 600]). W przypadku kilku ofert z różnych hoteli akceptuje ofertę z najniższą ceną. Generuje 0-2 zapytań dziennie.
 
 Charakterystyka klasy **WeekendPremiumPersona**:
+
 Klient z wysoką akceptacją ceny - najczęściej celuje aby początkowym dniem rezerwacji był piątek lub sobota, rzadziej wybiera dni robocze; pobyt zawsze na 7 dni. Ma wysoki budżet. Logika decyzyjna co do wyboru oferty jest analogiczna jak w przypadku klasy **LastMinutePersona**, ze zmianą w przedziale akceptowalnych cen, tj.: klient akceptuje ofertę, jeśli cena pokoju znajduje się w przedziale akceptowanych przez niego cen (przedział o początku w zerze i górnej granicy będącej liczbą losową z przedziału [1000, 1200]). W przypadku kilku ofert z różnych hoteli akceptuje ofertę z najniższą ceną. Generuje 0-2 zapytań dziennie.
 
 Charakterystyka klasy **RareLongStaySuitePersona**:
+
 Rzadki klient - 50% szans generowania zapytania w danym dniu, jeśli wysyła zapytanie to tylko jedno. Zawsze bierze *suite* i zawsze pobyt na 3 tygodnie (21 dni); ma wysoki budżet. Akceptuje ofertę, jeśli cena pokoju znajduje się w przedziale akceptowanych przez niego cen (przedział o początku w zerze i górnej granicy będącej liczbą losową z przedziału [1000, 1200]). W przypadku kilku ofert z różnych hoteli faworyzuje hotele w których już był (zmienna kontekstowa *returning_client*).
 
 Plan na potencjalne zmiany w przyszłości: uwzględnienie zmiennych kontekstowych (*city*, *device* i *retuning_client*) w metodach generowania zapytań przez klasy klientów; zmiana logiki akceptacji ofert przez każdą z klas klientów na taką, która korzysta z pewnych rozkładów prawdopodobieństwa (obecnie, jeśli cena znajduje się w przedziale cen akceptowanych klient akceptuje ofertę - bez znaczenia czy cena jest bliska dolnej czy górnej granicy owego przedziału - jedną z naturalnych metod rozszerzenia tej logiki jest zadanie pewnego rozkładu prawdopodobieństwa na tym przedziale).
