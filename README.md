@@ -13,14 +13,13 @@ Zakładamy, że znajdujemy się w pozycji osoby zarządzającej hotelem. Główn
 
 # Projekt
 
-## Opis systemu komunikacji
+## Opis systemu komunikacji i instrukcja uruchomienia
 
-(tu uzupełnimy jak już coś wrzucimy :> )
+(Wersja z 14/04/2026, do ewentualnych zmian w przyszłości, póki co skrypty umożliwiające komunikację zawierają również prymitywny algorytm wysyłania zapytań i generowania na nie odpowiedzi)
+
+System komunikacji odbywa się za pomocą skryptów napisanych w języku Python z wykorzystaniem funkcji z modułu *Flask*. Użytkownik odpowiadający za serwer hotelowy uruchamia na swoim komputerze skrypt *hotel_server.py* - skutkuje to postawieniem serwera, który nasłuchuje zapytań (w formacie JSON) od innych użytkowników. Drugi użytkownik, odpowiadający za agencję, uruchamia na swoim komputerze skrypt *agency_client.py* uzupełniając w odpowiednim miejscu adres IP serwera hotelowego (oznaczone komentarzem w niniejszym skrypcie). Obecna implementacja agencji przesyła serię zapytań do hotelu oraz podejmuje decyzję (póki co niebędącą wynikiem żadnego wyszukanego algorytmu) w odniesieniu do odpowiedzi hotelu.
 
 ## Opis person klientów
 
 (opis klientów, tu uzupełnimy jak już coś wrzucimy :> )
 
-## Instrukcja uruchomienia 
-
-(opis tego jak zainstalować zależności i odpalić serwer + agencję, uzupełnimy jak już coś wrzucimy :> )
